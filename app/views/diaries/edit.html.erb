@@ -1,0 +1,56 @@
+<%= stylesheet_link_tag 'edit', :media => "all" %>
+
+<div class="semi-header">
+  <h2>日記を編集</h2>
+</div>
+
+
+<div class="post-background">
+    <div class="post-container">
+    <%= form_for @diary do |f| %>
+
+        <div class="field">
+        <%= f.label :diary_date, "日付" %>
+        <%= raw sprintf(
+                f.date_select(
+                    :diary_date,{
+                    use_month_numbers: true,
+                    date_separator: '%s'},
+                    class:"date-select"),
+                '年 ', '月 ') + '日' %>
+        </div>
+
+        <div class="field">
+        <%= f.label :body, "本文" %>
+        <br>
+        <%= f.text_area :body, :size=>"100x8" %>
+        </div>
+
+        <div class="field">
+        <%= f.label :mental_condition, "心の状態" %>
+        <%= f.radio_button :mental_condition, "良い", checked: true %>良い
+        <%= f.radio_button :mental_condition, "少し悪い" %>少し悪い
+        <%= f.radio_button :mental_condition, "悪い" %>悪い
+        </div>
+
+        <div class="field">
+        <%= f.label :mental_comment, "コメント" %>
+        <%= f.text_field :mental_comment, :size => 140 %>
+        </div>
+
+        <div class="field">
+        <%= f.label :physical_condition, "体の状態" %>
+        <%= f.radio_button :physical_condition, "良い", checked: true %>良い
+        <%= f.radio_button :physical_condition, "少し悪い" %>少し悪い
+        <%= f.radio_button :physical_condition, "悪い" %>悪い
+        </div>
+
+        <div class="field">
+        <%= f.label :physical_comment, "コメント" %>
+        <%= f.text_field :physical_comment, :size => 140 %>
+        </div>
+        
+        <%= f.submit "保存する" %>
+    <% end %>
+    </div>
+</div>

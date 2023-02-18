@@ -1,0 +1,55 @@
+<%= stylesheet_link_tag 'index', :media => "all" %>
+
+<div class="semi-header">
+
+    <h2>日記一覧</h2>
+
+    <div class="search-box">
+        
+        <%= form_tag({controller: "diaries", action: "index"}, method: :get) do %>
+            <span><%= text_field_tag :search, @search %></span>
+            <span><%= submit_tag '検索'  %></span>
+        <% end %>
+            <span><%= button_to "検索リセット", diaries_path, method: :get %></span>
+            <span>日付を検索する場合 (例) 2022-11-15</span>
+    </div>
+
+</div>
+
+<div class="diaries-container">
+
+    <% @user_diaries.reverse_each do |d| %>
+        <div class="diary">
+            <div class="first-brock">
+                <ul class="date_days">
+                    <li><%= d.diary_date.strftime('%Y年%m月%d日') %></li>
+                    <li><%= @days[d.diary_date.wday] %></li>
+                </ul>
+                <ul class="links">
+                    <li><%= link_to "編集する", edit_diary_path(d.id), method: :get %></li>
+                    <li><%= link_to "詳細", diary_path(d.id), method: :get %></li>
+                </ul>
+            </div>
+            <div class="second-brock">
+                <%= d.body %>
+            </div>
+            <div class="third-brock">
+                <ul>
+                    <li><span class="li_title">心の状態</span></li>
+                    <li><%= d.mental_condition %></li>
+                    <li><span class="comment"><%= d.mental_comment %></span></li>
+                </ul>
+            </div>
+            <div class="forth-brock">
+                <ul>
+                    <li><span class="li_title">体の状態</span></li>
+                    <li><%= d.physical_condition %></li>
+                    <li><span class="comment"><%= d.physical_comment %></span></li>
+                </ul>
+            </div>
+        </div>
+    
+    <% end %>
+
+</div>
+

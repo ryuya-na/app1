@@ -1,0 +1,58 @@
+.semi-header {
+    position: fixed;
+    top: 60px;    
+    height: 40px;
+    width: 100%;
+    z-index: 9;
+    background-color: #D9D0C1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.semi-header h2 {
+    font-size: 25px;
+    margin-left: 20px;
+    color: #595959;
+}
+
+
+.post-background {
+    background-image: url(paper.jpg);
+    padding-top: 130px;
+    height: 85vh;
+}
+
+.post-container {
+    background-color: #F4F0EB;
+    margin: 0px 20px;
+    border-radius: 15px;
+    text-align: center;
+    color: #262626;
+    font-size: 18px;
+    padding-top: 15px;
+}
+
+.post-container .date-select {
+    font-size: 18px;
+}
+
+.post-container textarea {
+    font-size: 18px;
+    width: 90%;
+
+}
+
+.post-container input[type="text"] {
+    width: 80%;
+    height: 30px;
+    font-size: 18px;
+}
+
+.post-container input[type="submit"] {
+    width: 200px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+

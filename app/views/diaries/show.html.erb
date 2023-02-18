@@ -1,0 +1,39 @@
+<%= stylesheet_link_tag 'show', :media => "all" %>
+
+<div class="semi-header">
+  <h2>日記詳細</h2>
+</div>
+
+
+<div class="diary-background">
+    <div class="diary">
+        <div class="first-brock">
+            <ul class="date_days">
+                <li><%= @diary.diary_date.strftime('%Y年%m月%d日') %></li>
+                <li><%= @days[@diary.diary_date.wday] %></li>
+            </ul>
+        </div>
+        <div class="second-brock">
+            <%= @diary.body %>
+        </div>
+        <div class="third-brock">
+            <ul>
+                <li><span class="li_title">心の状態</span></li>
+                <li><%= @diary.mental_condition %></li>
+                <li><span class="comment"><%= @diary.mental_comment %></span></li>
+            </ul>
+        </div>
+        <div class="forth-brock">
+            <ul>
+                <li><span class="li_title">体の状態</span></li>
+                <li><%= @diary.physical_condition %></li>
+                <li><span class="comment"><%= @diary.physical_comment %></span></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="delete">
+        <%= button_to "削除する", diary_path(@diary.id), method: :delete, class: "button" %>
+    </div>
+</div>
+

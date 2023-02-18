@@ -1,0 +1,169 @@
+.semi-header {
+    position: fixed;
+    top: 60px;    
+    height: 40px;
+    width: 100%;
+    z-index: 9;
+    background-color: #D9D0C1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.semi-header h2 {
+    font-size: 25px;
+    margin-left: 20px;
+    color: #595959;
+}
+
+.space {
+    height: 100px;
+    background-image: url(paper.jpg);
+}
+
+.charts {
+    display: flex;
+    background-image: url(paper.jpg);
+    height: 320px;
+    padding: 10px 0;
+}
+
+.scale {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    color: #5E5E5E;
+    background-image: url(paper.jpg);
+    width: 70px;
+    height: 263px;
+    margin-top: 20px;
+    margin-left: 10px;
+    z-index: 2;
+}
+
+.chart {
+    background-image: url(paper.jpg);
+    z-index: 1;
+    position: absolute;
+    left: 70px;
+    width: 90%;
+}
+
+.diaries-container {
+    background-image: url(paper.jpg);
+    padding-bottom: 20px;
+}
+
+.diary {
+    background-color: #F4F0EB;
+    margin: 0px 20px 20px;
+    border-radius: 15px;
+    padding: 5px;
+    font-size: 16px;
+    display: flex;
+}
+
+.diary a {
+    color: #AC9C78; 
+    text-decoration: none; 
+}
+.diary a:link {
+    color: #AC9C78;
+    text-decoration: none;
+}
+.diary a:hover {
+    color: #7D6632;
+    text-decoration: underline;
+}
+
+.first-brock {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+
+.date_days {
+    display: flex;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.date_days li {
+    list-style: none;
+    margin-right: 10px;
+}
+
+.links {
+    display: flex;
+    margin-left: 20px;
+}
+
+.links li{
+    list-style: none;
+    margin-right: 10px;
+}
+
+.third-brock {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+.third-brock .up ul {
+    display: flex;
+}
+
+
+.third-brock .up li{
+    display: flex;
+    list-style: none;
+    margin-right: 10px;
+    color: #BF0426;
+}
+
+.third-brock .down ul {
+    display: flex;
+}
+
+
+.third-brock .down li{
+    display: flex;
+    list-style: none;
+    margin-right: 10px; 
+    color: #262626;
+}
+
+
+.forth-brock {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+.forth-brock .up ul {
+    display: flex;
+}
+
+.forth-brock .up li{
+    display: flex;
+    list-style: none;
+    margin-right: 10px;
+    color: #034AA6;
+}
+
+.forth-brock .down ul {
+    display: flex;
+}
+
+.forth-brock .down li{
+    display: flex;
+    list-style: none;
+    margin-right: 10px; 
+    color: #262626;
+}
+
+.li_title {
+    font-weight: bold;
+}
+

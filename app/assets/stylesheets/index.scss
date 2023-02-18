@@ -1,0 +1,139 @@
+.semi-header {
+    position: fixed;
+    top: 60px;    
+    height: 40px;
+    width: 100%;
+    z-index: 9;
+    background-color: #D9D0C1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.semi-header h2 {
+    font-size: 25px;
+    margin-left: 20px;
+    color: #595959;
+}
+
+.search-box {
+    display: flex;
+    margin-right: 20px;
+    justify-content: space-between;
+    align-items: baseline;
+  
+}
+
+.search-box span {
+    margin-right: 10px;
+    color: #595959;
+}
+
+.search-box input[type="text"]{
+    height: 25px;
+    font-size: 15px;
+}
+
+.search-box input[type="submit"] {
+    height: 25px;
+    font-size: 15px;
+}
+
+.diaries-container {
+    background-image: url(paper.jpg);
+    padding-top: 130px;
+    padding-bottom: 400px;
+}
+
+.diary {
+    background-color: #F4F0EB;
+    margin: 0px 20px 30px;
+    padding: 5px;
+    font-size: 18px;
+    border-radius: 15px;
+}
+
+.diary a {
+    color: #AC9C78;
+    text-decoration: none; 
+}
+.diary a:link {
+    color: #AC9C78;
+    text-decoration: none;
+}
+.diary a:hover {
+    color: #7D6632;
+    text-decoration: underline;
+}
+
+.first-brock {
+    display: flex;
+    margin: 10px 0;	
+}
+
+.date_days {
+    font-weight: bold;
+    display: flex;
+    margin-left: 20px;
+}
+
+.date_days li {
+    list-style: none;
+    margin-right: 10px;
+}
+
+.links {
+    display: flex;
+    margin-left: 50px;
+}
+
+.links li{
+    list-style: none;
+    margin-right: 10px;
+}
+
+.second-brock {
+    display: flex;
+    margin: 10px 0;
+    color: #262626;
+}
+
+.third-brock {
+    display: flex;
+    margin-top: 20px;
+}
+
+.third-brock ul {
+    display: flex;
+}
+
+
+.third-brock li{
+    list-style: none;
+    margin-right: 10px;
+    color: #8C622E;
+}
+
+.forth-brock {
+    display: flex;
+}
+
+.forth-brock ul {
+    display: flex;
+}
+
+.forth-brock li{
+    list-style: none;
+    margin-right: 10px;
+    color: #8C622E;
+}
+
+.li_title {
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.comment {
+    position: absolute;
+    left: 210px;
+}

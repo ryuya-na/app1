@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Diary with Health</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+    <header>
+      <h1><span class="t">Diary </span><span class="s">with Health</span></h1>
+      <div class="header-list">
+      <ul>
+        <li><%= link_to "日記を書く",new_diary_path %></li>
+        <li><%= link_to "日記一覧", diaries_path %></li>
+        <li><%= link_to "健康状態",diaries_condition_path %></li>
+        <li><%= link_to "ログアウト",destroy_user_session_path, method: :delete %></li>
+      </ul>
+      </div>
+    </header>
+
+    <main>
+      <%= yield %>
+    </main>
+
+<% if false %>
+    # <footer>
+    #   <p>Copyright © GeekSalon All Rights Reserved.</p>
+    # </footer>
+<% end %>
+
+  </body>
+</html>

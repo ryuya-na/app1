@@ -1,0 +1,22 @@
+<%= stylesheet_link_tag 'hello_index', :media => "all" %>
+
+<div class="semi-header">
+  <h2>Home</h2>
+</div>
+
+<div class="background">
+
+    <p class="app_name"><span class="t">Diary </span><span class="s">with Health</span></p>
+    <p class="app_explanation">日記をつけながら、<br>心と体の健康を管理する<br>アプリ</p>
+    
+    <div class="contents">
+        <ul>
+            <li><%= link_to "ログイン", diaries_path %></li>
+            <li><div class="sample">サンプルはこちら↑</div></li>
+        </ul>
+
+        <ul>
+            <li><%= link_to "新規登録", new_user_registration_path %></li>
+        </ul>
+    </div>
+</div>

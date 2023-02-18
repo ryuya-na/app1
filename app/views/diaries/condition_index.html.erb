@@ -1,0 +1,62 @@
+<%= stylesheet_link_tag 'condition_index', :media => "all" %>
+
+<div class="semi-header">
+  <h2>健康状態</h2>
+</div>
+
+<div class="space">
+</div>
+
+<div class="charts">
+    <div class="scale">
+        <div>良い</div>
+        <div>少し悪い</div>
+        <div>悪い</div>
+    </div>
+    <div class="chart">
+        <%= line_chart @chart_data, curve: false, colors: ["#BF0426", "#034AA6"] %>
+    </div>
+</div>
+
+<div class="diaries-container">
+    <% @user_diaries.reverse_each do |d| %>
+        <div class="diary">
+            <div class="first-brock">
+                <ul class="date_days">
+                    <li><%= d.diary_date.strftime('%m月%d日') %></li>
+                    <li><%= @days[d.diary_date.wday] %></li>
+                </ul>
+                <ul class="links">
+                    <li><%= link_to "編集する", edit_diary_path(d.id), method: :get %></li>
+                    <li><%= link_to "詳細", diary_path(d.id), method: :get %></li>
+                </ul>
+            </div>
+            <div class="third-brock">
+                <div class="up">
+                    <ul>
+                        <li><span class="li_title">心の状態</span></li>
+                        <li><%= d.mental_condition %></li>
+                    </ul>
+                </div>
+                <div class="down">
+                    <ul class="down">
+                        <li><span class="comment"><%= d.mental_comment %></span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="forth-brock">
+                <div class="up">
+                    <ul>
+                        <li><span class="li_title">体の状態</span></li>
+                        <li><%= d.physical_condition %></li>
+                    </ul>
+                </div>
+                <div class="down">
+                    <ul>
+                        <li><span class="comment"><%= d.physical_comment %></span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    <% end %>
+</div>
